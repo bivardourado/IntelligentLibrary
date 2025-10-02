@@ -1,0 +1,17 @@
+# requirements_atualizado.txt (VERSÃO CORRIGIDA)
+
+# Frameworks principais
+eel==0.14.0
+langchain>=0.1.0
+langchain-community>=0.0.13
+langchain-openai>=0.0.5
+
+# Processamento de documentos e vetores
+pypdf>=4.0.1
+qdrant-client>=1.7.0
+sentence-transformers>=2.2.2
+
+# Outras dependências que podem estar no seu arquivo
+# Se tiver outras linhas com '==', troque para '>='
+# Exemplo:
+# some-other-library>=1.2.3

@@ -1,0 +1,15 @@
+server/db_storage/.lock 
+node_modules/ 
+dist/ 
+build/ 
+__pycache__/ 
+*.pyc 
+*.log 
+.env 
+server/db_storage/*.lock 
+bun.lockb 
+pnpm-lock.yaml 
+server/embedding_cache/ 
+public/server/backend.exe 
+*.exe 
+*.safetensors 

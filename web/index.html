@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligent Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+<body>
+
+    <!-- TELA DE CONFIGURAÇÃO DE API -->
+    <div id="setup-screen" class="setup-container" style="display: none;">
+        <h1>Bem-vindo ao 📚 Intelligent Library</h1>
+        <div class="setup-step">
+            <h2>1. Configure sua Chave da API da OpenAI</h2>
+            <p>Para que a inteligência artificial funcione, cole sua chave de API da OpenAI abaixo. Seus dados e custos são gerenciados por você.</p>
+            <input type="password" id="apiKeyInput" placeholder="Cole sua chave (sk-...) aqui">
+            <button id="saveApiKeyButton">Salvar Chave e Continuar</button>
+            <p id="api-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- TELA DE LICENÇA EXPIRADA -->
+    <div id="expired-screen" class="setup-container" style="display: none;">
+        <h1>Assinatura Expirada</h1>
+        <p id="expired-message">Sua licença ou período de teste terminou. Para continuar usando o aplicativo, por favor, adquira e ative uma nova chave de licença.</p>
+        <div class="setup-step">
+            <h2>Ativar Nova Licença</h2>
+            <input type="password" id="licenseKeyInput" placeholder="Cole sua chave de licença aqui">
+            <button id="activateLicenseButton">Ativar Licença</button>
+            <p id="license-error" class="error-message"></p>
+        </div>
+        <a href="#" id="buy-link" target="_blank">Comprar uma nova licença</a>
+    </div>
+
+    <!-- NOVA TELA PARA CARREGAR DOCUMENTOS -->
+    <div id="load-docs-screen" class="setup-container" style="display: none;">
+        <h1>📚 Intelligent Library</h1>
+        <div class="setup-step">
+            <h2>2. Carregue seus Documentos PDF</h2>
+            <p>Selecione a pasta onde seus arquivos PDF estão localizados. O aplicativo irá processá-los para criar sua biblioteca inteligente.</p>
+            <button id="selectFolderButton">Selecionar Pasta de PDFs</button>
+            <p id="selectedFolderPath">Nenhuma pasta selecionada.</p>
+            <p id="loadDocsStatus" class="status-message"></p>
+        </div>
+    </div>
+
+    <!-- TELA PRINCIPAL DE CHAT -->
+    <div id="chat-screen" class="chat-container" style="display: none;">
+        <div class="chat-header">
+            <h1>📚 Intelligent Library</h1>
+            <p id="status-message">Converse com sua biblioteca de documentos.</p>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="perguntaInput" placeholder="Faça uma pergunta...">
+            <button id="sendButton">➤</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
